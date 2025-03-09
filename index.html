@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunKord - Cordini per Occhiali</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Loader -->
+  <div class="loader-container" id="loader">
+    <div class="loader">
+      <div class="loader-logo">SunKord</div>
+      <div class="loader-line"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content" id="content">
+    <header>
+      <div class="logo"><img src="img/suncord.svg" alt="SunKord Logo" class="logo-img"> SunKord</div>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Prodotti</a></li>
+          <li><a href="#">Chi siamo</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Eleganza e Funzionalità<br>per i tuoi Occhiali</h1>
+      <p>SunKord offre cordini per occhiali di alta qualità, che combinano stile e praticità per mantenere i tuoi
+        occhiali sempre a portata di mano.</p>
+      <a href="#" class="cta-button">Scopri la collezione</a>
+    </section>
+
+    <section class="products">
+      <h2 class="section-title">I Nostri Prodotti</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">Immagine Prodotto</div>
+          <div class="product-info">
+            <h3 class="product-title">Cordino Classic</h3>
+            <p class="product-price">€19.90</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">Immagine Prodotto</div>
+          <div class="product-info">
+            <h3 class="product-title">Cordino Premium</h3>
+            <p class="product-price">€24.90</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">Immagine Prodotto</div>
+          <div class="product-info">
+            <h3 class="product-title">Cordino Sport</h3>
+            <p class="product-price">€22.90</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-section">
+      <h2 class="section-title">Crea il Tuo Cordino Personalizzato</h2>
+      <div class="custom-container">
+        <div class="progress-bar">
+          <div class="progress-step active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-label">Cordino</div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-label">Agganci</div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-label">Clip</div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="4">
+            <div class="step-number">4</div>
+            <div class="step-label">Charm</div>
+          </div>
+        </div>
+
+        <div class="custom-content">
+          <!-- Step 1: Scegli il cordino -->
+          <div class="custom-step active" id="step1">
+            <h3 class="step-title">Scegli il Tuo Cordino</h3>
+            <div class="options-grid cord-options">
+              <div class="option-item" data-option="arancione">
+                <div class="option-image">
+                  <img src="img/arancione.png" alt="Cordino Arancione" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Arancione</h4>
+                  <p>€12.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="beje-blu">
+                <div class="option-image">
+                  <img src="img/beje-blu.png" alt="Cordino Beige Blu" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Beige Blu</h4>
+                  <p>€14.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="bianco">
+                <div class="option-image">
+                  <img src="img/bianco.png" alt="Cordino Bianco" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Bianco</h4>
+                  <p>€16.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="blu-arancione">
+                <div class="option-image">
+                  <img src="img/blu-arancione.png" alt="Cordino Blu Arancione" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Blu Arancione</h4>
+                  <p>€15.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="blu-viola">
+                <div class="option-image">
+                  <img src="img/blu-viola.png" alt="Cordino Blu Viola" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Blu Viola</h4>
+                  <p>€18.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="nero-bianco">
+                <div class="option-image">
+                  <img src="img/nero-bianco.png" alt="Cordino Nero Bianco" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Nero Bianco</h4>
+                  <p>€13.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="rasta">
+                <div class="option-image">
+                  <img src="img/rasta.png" alt="Cordino Rasta" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Rasta</h4>
+                  <p>€11.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="rosso-beje">
+                <div class="option-image">
+                  <img src="img/rosso-beje.png" alt="Cordino Rosso Beige" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Rosso Beige</h4>
+                  <p>€17.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="verde">
+                <div class="option-image">
+                  <img src="img/verde.png" alt="Cordino Verde" class="cord-img">
+                </div>
+                <div class="option-info">
+                  <h4>Verde</h4>
+                  <p>€12.90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Scegli gli agganci -->
+          <div class="custom-step" id="step2">
+            <h3 class="step-title">Scegli gli Agganci</h3>
+            <div class="options-grid">
+              <div class="option-item" data-option="hook1">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Aggancio 1">
+                </div>
+                <div class="option-info">
+                  <h4>Silicone Soft</h4>
+                  <p>€5.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="hook2">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Aggancio 2">
+                </div>
+                <div class="option-info">
+                  <h4>Metallo Standard</h4>
+                  <p>€6.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="hook3">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Aggancio 3">
+                </div>
+                <div class="option-info">
+                  <h4>Premium Oro</h4>
+                  <p>€8.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="hook4">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Aggancio 4">
+                </div>
+                <div class="option-info">
+                  <h4>Avvolgente Sport</h4>
+                  <p>€7.90</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Scegli le clip -->
+          <div class="custom-step" id="step3">
+            <h3 class="step-title">Scegli le Clip</h3>
+            <div class="options-grid">
+              <div class="option-item" data-option="clip1">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Clip 1">
+                </div>
+                <div class="option-info">
+                  <h4>Clip Standard</h4>
+                  <p>€3.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="clip2">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Clip 2">
+                </div>
+                <div class="option-info">
+                  <h4>Clip Argento</h4>
+                  <p>€4.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="clip3">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Clip 3">
+                </div>
+                <div class="option-info">
+                  <h4>Clip Oro</h4>
+                  <p>€5.90</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="clip4">
+                <div class="option-image">
+                  <img src="/api/placeholder/200/200" alt="Clip 4">
+                </div>
+                <div class="option-info">
+                  <h4>Clip Nera</h4>
+                  <p>€4.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Aggiungi charm (opzionale) -->
+          <div class="custom-step" id="step4">
+            <h3 class="step-title">Aggiungi Charm (opzionale, max 5)</h3>
+            <div class="selected-charms">
+              <p class="charm-counter">Charm selezionati: <span id="charmCount">0</span>/5</p>
+              <div id="selectedCharmsList" class="selected-items"></div>
+            </div>
+            <div class="options-grid">
+              <div class="option-item" data-option="charm1">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 1">
+                </div>
+                <div class="option-info">
+                  <h4>Stella Marina</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="charm2">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 2">
+                </div>
+                <div class="option-info">
+                  <h4>Sole</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="charm3">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 3">
+                </div>
+                <div class="option-info">
+                  <h4>Luna</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="charm4">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 4">
+                </div>
+                <div class="option-info">
+                  <h4>Conchiglia</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="charm5">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 5">
+                </div>
+                <div class="option-info">
+                  <h4>Cuore</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="charm6">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 6">
+                </div>
+                <div class="option-info">
+                  <h4>Foglia</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="charm7">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 7">
+                </div>
+                <div class="option-info">
+                  <h4>Fiore</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+              <div class="option-item" data-option="charm8">
+                <div class="option-image">
+                  <img src="/api/placeholder/150/150" alt="Charm 8">
+                </div>
+                <div class="option-info">
+                  <h4>Farfalla</h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-summary">
+          <h3>Il Tuo Cordino</h3>
+          <div class="summary-details">
+            <div id="summaryItems">
+              <p>Seleziona un cordino per iniziare</p>
+            </div>
+            <div class="summary-total">
+              <p>Totale: <span id="totalPrice">€0.00</span></p>
+            </div>
+          </div>
+          <div class="custom-nav">
+            <button id="prevBtn" class="nav-btn" disabled>Indietro</button>
+            <button id="nextBtn" class="nav-btn">Avanti</button>
+            <button id="finishBtn" class="nav-btn finish-btn" style="display: none;">Aggiungi al Carrello</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo"><img src="img/suncord.svg" alt="SunKord Logo" class="logo-img"> SunKord</div>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Termini</a>
+          <a href="#">FAQ</a>
+          <a href="#">Spedizioni</a>
+        </div>
+        <p class="copyright">© 2025 SunKord. Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
