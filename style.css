@@ -481,7 +481,7 @@ footer {
 .option-image img {
   max-width: 100%;
   height: 100%;
-  transition: transform 0.3s ease; /* Transizione fluida per lo zoom */
+  transition: transform 0.5s ease; /* Transizione fluida per lo zoom */
 }
 
 .option-item:hover .option-image img {
@@ -532,6 +532,42 @@ footer {
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #eee;
+}
+
+/* Anteprima del prodotto */
+.preview-container {
+  margin-bottom: 30px;
+}
+
+.product-preview {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+.preview-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.preview-image {
+  height: 350px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.preview-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .summary-details {

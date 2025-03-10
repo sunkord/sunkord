@@ -59,6 +59,14 @@ function initCustomization() {
     charms: []
   };
 
+  // Elementi per l'anteprima
+  const previewCordino = document.getElementById("previewCordino");
+  const previewAggancioSx = document.getElementById("previewAggancioSx");
+  const previewAggancioDx = document.getElementById("previewAggancioDx");
+  const previewClipSx = document.getElementById("previewClipSx");
+  const previewClipDx = document.getElementById("previewClipDx");
+  const previewCharms = document.getElementById("previewCharms");
+
   // Prezzi (€)
   const prices = {
     cordino: 0,
@@ -106,6 +114,9 @@ function initCustomization() {
             price: optionPrice
           };
           prices.cordino = optionPrice;
+
+          // Aggiorna l'anteprima del cordino
+          previewCordino.style.backgroundImage = `url(img/${option}.png)`;
         } else if (stepId === "step2") {
           selectedOptions.aggancio = {
             id: option,
@@ -113,6 +124,13 @@ function initCustomization() {
             price: optionPrice
           };
           prices.aggancio = optionPrice;
+
+          // Aggiorna l'anteprima degli agganci
+          // Nota: qui usiamo dei placeholder perché non abbiamo le immagini reali degli agganci
+          previewAggancioSx.style.backgroundImage = `url(/api/placeholder/80/80)`;
+          previewAggancioSx.style.backgroundPosition = "left center";
+          previewAggancioDx.style.backgroundImage = `url(/api/placeholder/80/80)`;
+          previewAggancioDx.style.backgroundPosition = "right center";
         } else if (stepId === "step3") {
           selectedOptions.clip = {
             id: option,
@@ -120,6 +138,13 @@ function initCustomization() {
             price: optionPrice
           };
           prices.clip = optionPrice;
+
+          // Aggiorna l'anteprima delle clip
+          // Nota: qui usiamo dei placeholder perché non abbiamo le immagini reali delle clip
+          previewClipSx.style.backgroundImage = `url(/api/placeholder/50/50)`;
+          previewClipSx.style.backgroundPosition = "left center";
+          previewClipDx.style.backgroundImage = `url(/api/placeholder/50/50)`;
+          previewClipDx.style.backgroundPosition = "right center";
         }
 
         updateSummary();
@@ -155,6 +180,9 @@ function initCustomization() {
           price: optionPrice
         });
         prices.charms += optionPrice;
+
+        // Aggiorna l'anteprima dei charm
+        updateCharmsPreview();
       }
 
       // Aggiorna contatore e sommario
@@ -283,6 +311,41 @@ function initCustomization() {
     totalPrice.textContent = `€${total.toFixed(2)}`;
   }
 
+  // Funzione per aggiornare l'anteprima dei charm
+  function updateCharmsPreview() {
+    // Reset dell'anteprima dei charm
+    previewCharms.innerHTML = "";
+
+    // Posiziona i charm lungo il cordino
+    if (selectedOptions.charms.length > 0) {
+      const charmContainer = document.createElement("div");
+      charmContainer.className = "charms-container";
+
+      selectedOptions.charms.forEach((charm, index) => {
+        const charmElement = document.createElement("div");
+        charmElement.className = "preview-charm";
+
+        // Calcola la posizione del charm lungo il cordino
+        const leftPos = 10 + index * 20;
+        const topPos = 150 + ((index * 30) % 60);
+
+        charmElement.style.cssText = `
+                    position: absolute;
+                    left: ${leftPos}%;
+                    top: ${topPos}px;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url(/api/placeholder/30/30);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    z-index: ${10 + index};
+                `;
+
+        previewCharms.appendChild(charmElement);
+      });
+    }
+  }
+
   function updateSelectedCharmsList() {
     selectedCharmsList.innerHTML = "";
 
@@ -320,6 +383,7 @@ function initCustomization() {
           // Aggiorna UI
           charmCount.textContent = selectedOptions.charms.length;
           updateSelectedCharmsList();
+          updateCharmsPreview();
           updateSummary();
         }
       });
